@@ -19,7 +19,7 @@ OSINT hacker tool by kuldeep
 
 ## 📦 Installation
 ```bash
-git clone https://github.com/YOUR_USERNAME/osint-kd.git
+git clone https://github.com/kuldeepLinux/osint-kd.git
 cd osint-kd
 pip install -r requirements.txt
 python app.py
