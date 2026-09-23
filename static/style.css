@@ -1,0 +1,197 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #000;
+    color: #00ff00;
+    font-family: 'VT323', 'Courier New', monospace;
+    font-size: 18px;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Desktop Background Image (Matrix Style) */
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0, 20, 0, 0.85), rgba(0, 20, 0, 0.85)),
+        url('https://wallpapercave.com/wp/wp2757874.gif') center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top Bar */
+.topbar {
+    background: #000;
+    border-bottom: 2px solid #00ff00;
+    padding: 5px 15px;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.blink { animation: blink 1s infinite; }
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+/* Draggable Window */
+.window {
+    position: absolute;
+    background: #000;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+    min-width: 350px;
+    z-index: 10;
+}
+.window-header {
+    background: #00ff00;
+    color: #000;
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: move;
+    font-weight: bold;
+}
+.window-title {
+    margin-left: 10px;
+    font-size: 16px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.window-body {
+    padding: 15px;
+}
+
+/* Headings */
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px #00ff00;
+}
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #00cc00;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+button {
+    background: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+input {
+    background: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 6px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    width: 65%;
+    margin-right: 5px;
+}
+
+/* Output Box */
+.output {
+    background: #050505;
+    border: 1px dashed #00ff00;
+    padding: 10px;
+    min-height: 150px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Right Side Icon Grid */
+.icon-grid {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    z-index: 5;
+}
+.icon-item {
+    text-align: center;
+    cursor: pointer;
+    color: #00ff00;
+    font-size: 14px;
+}
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid #00ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 5px;
+    box-shadow: 0 0 10px #00ff00;
+    transition: 0.3s;
+}
+.icon-item:hover .icon-box {
+    background: #00ff00;
+    color: #000;
+}
+
+/* Taskbar */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    border-top: 2px solid #00ff00;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+    z-index: 9999;
+}
+.start-btn {
+    background: #00ff00;
+    color: #000;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.task-item {
+    border: 1px solid #00ff00;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.clock {
+    margin-left: auto;
+    padding-right: 20px;
+}
