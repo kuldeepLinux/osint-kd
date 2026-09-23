@@ -23,6 +23,9 @@ git clone https://github.com/kuldeepLinux/osint-kd.git
 cd osint-kd
 pip install -r requirements.txt
 python app.py
+
+
+
 ⚠️ DISCLAIMER
 
 IMPORTANT: PLEASE READ CAREFULLY BEFORE USING THIS TOOL
