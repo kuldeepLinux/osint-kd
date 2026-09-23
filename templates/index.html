@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT-KD | Made by Kuldeep</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Desktop Background -->
+    <div class="desktop">
+
+        <!-- Top Bar -->
+        <div class="topbar">
+            <span>root@osint-kd:~#</span>
+            <span class="blink">_</span>
+        </div>
+
+        <!-- Windows Container -->
+        <div id="windows-container">
+
+            <!-- Main Console Window (Draggable) -->
+            <div class="window" id="console-window" style="left: 30px; top: 60px; width: 450px;">
+                <div class="window-header" onmousedown="startDrag(event, 'console-window')">
+                    <span class="dot red" onclick="closeWindow('console-window')"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="window-title">Program Console</span>
+                </div>
+                <div class="window-body">
+                    <h1>👾 OSINT-KD v1.0</h1>
+                    <p class="subtitle">Made with 💚 by <b>Kuldeep</b></p>
+
+                    <div class="buttons">
+                        <button onclick="showInput('phone')">📱 Phone Info</button>
+                        <button onclick="showInput('ip')">🌐 IP Tracker</button>
+                        <button onclick="showInput('username')">🔍 Username Search</button>
+                        <button onclick="showInput('whois')">📡 Domain WHOIS</button>
+                    </div>
+
+                    <div id="inputArea"></div>
+                    <div class="output" id="output">[+] System Ready... Waiting for input_</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Side Icons (Pranx Style) -->
+        <div class="icon-grid">
+            <div class="icon-item" onclick="showInput('phone')">
+                <div class="icon-box">📱</div>
+                <span>Phone Info</span>
+            </div>
+            <div class="icon-item" onclick="showInput('ip')">
+                <div class="icon-box">🌐</div>
+                <span>IP Tracker</span>
+            </div>
+            <div class="icon-item" onclick="showInput('username')">
+                <div class="icon-box">🔍</div>
+                <span>Username</span>
+            </div>
+            <div class="icon-item" onclick="showInput('whois')">
+                <div class="icon-box">📡</div>
+                <span>WHOIS</span>
+            </div>
+        </div>
+
+        <!-- Footer Taskbar -->
+        <div class="taskbar">
+            <div class="start-btn">⊞ Start</div>
+            <div class="task-item">Program Console</div>
+            <div class="clock" id="clock">--:--:--</div>
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
